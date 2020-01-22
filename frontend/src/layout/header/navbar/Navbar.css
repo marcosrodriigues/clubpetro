@@ -1,14 +1,9 @@
 .navbar {
     position: relative;
     height: 80px;
+    border-left: 1px solid #c9c9c9;
+    border-bottom: 1px solid #c3c3c3;
 }
-
-.navbar::before {
-    border: 2px solid #c3c3c3;
-    opacity: 0.5;
-}
-
-
 .sidebar-toggle {
     float: left;
     color: inherit;

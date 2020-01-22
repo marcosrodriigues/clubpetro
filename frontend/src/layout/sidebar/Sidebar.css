@@ -16,7 +16,7 @@
     width: 100%;
     padding-left: 40px;
 }
-.menu-item > i {
+.menu-item > a > i {
     color: #b9b7ff;
     font-size: 20px;
     margin-right: 30px;

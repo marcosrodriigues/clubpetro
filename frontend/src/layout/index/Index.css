@@ -24,3 +24,24 @@
     border-left: 2px solid #ea5931;
     background-color: #eaeaea;
 }
+
+.main-sidebar {
+    float: left;
+}
+
+.main-content {
+    padding-top: 80px;
+    width: 100%;
+}
+
+.right {
+    float: right;
+}
+
+.left {
+    float: left;
+}
+
+.mt-25 {
+    margin-top: 25px;
+}

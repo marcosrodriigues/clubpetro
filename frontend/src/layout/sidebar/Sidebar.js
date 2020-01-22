@@ -1,41 +1,56 @@
 import React from 'react'
 
+import { Link } from 'react-router-dom'
+
 import './Sidebar.css'
 
 function Sidebar() {
     return (
-        <aside className="main-sidebar">
-            <section className="sidebar">
-                <div className="menu-item">
+        <section className="sidebar">
+            <div className="menu-item">
+                <Link to="/dashboard">
                     <i className="fa fa-clock-o"></i>
                     DASHBOARD
-                </div>
-                <div className="menu-item">
+                </Link>
+            </div>
+            <div className="menu-item">
+                <Link to="/resgates">
                     <i className="fa fa-share"></i>
                     RESGATES
-                </div>
-                <div className="menu-item active">
+                </Link>
+            </div>
+            <div className="menu-item active">
+                <Link to="/antifraude">
                     <i className="fa fa-briefcase"></i>
                     ANTI FRAUDE
-                </div>
-                <div className="menu-item">
+                </Link>
+            </div>
+
+            <div className="menu-item">
+                <Link to="/vendas">
                     <i className="fa fa-exchange"></i>
-                    VENDAS
-                </div>
-                <div className="menu-item">
+                    VENDAS    
+                </Link>
+            </div>
+            <div className="menu-item">
+                <Link to="/relatorios">
                     <i className="fa fa-bar-chart-o"></i>
-                    RELATÓRIOS
-                </div>
-                <div className="menu-item">
+                    RELATÓRIOS    
+                </Link>
+            </div>
+            <div className="menu-item">
+                <Link to="/perfil">
                     <i className="fa fa-user-circle-o"></i>
                     PERFIL
-                </div>
-                <div className="menu-item">
+                </Link>
+            </div>
+            <div className="menu-item">
+                <Link to="/campanhas">
                     <i className="fa fa-feed"></i>
                     CAMPANHAS
-                </div>
-            </section>
-        </aside>
+                </Link>
+            </div>
+        </section>
     )
 }
 

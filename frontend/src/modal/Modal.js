@@ -5,7 +5,7 @@ function Modal(props) {
 
     return (
         <div className="modal fade" id="defaultModal" tabIndex="-1" role="dialog" aria-labelledby="modalTitle">
-            <div className="modal-dialog" role="document">
+            <div className="modal-dialog modal-dialog-centered" role="document">
                 <div className="modal-content">
                     <div className="modal-body">
                         <div className="container">

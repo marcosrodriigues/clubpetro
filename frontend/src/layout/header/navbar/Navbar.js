@@ -6,21 +6,21 @@ import '@fortawesome/react-fontawesome'
 function Navbar() {
     return (
         <nav className="navbar" role="navigation">
-            <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
+            <a href="#" className="sidebar-toggle" data-toggle="push-menu" role="button">
                 <i className="fa fa-bars bg-lg"></i>
                 <span className="ml-20">
                     Anti-Fraude
                 </span>
             </a>
             <div className="navbar-menu">
-                <div class="menu bg-lg">
-                    <div class="each-menu">
+                <div className="menu bg-lg">
+                    <div className="each-menu">
                         <i className="fa fa-search" />
                     </div>
-                    <div class="each-menu">
+                    <div className="each-menu">
                         <i className="fa fa-envelope" />
                     </div>
-                    <div class="each-menu">
+                    <div className="each-menu">
                         <i className="fa fa-bell" />
                     </div>
                 </div>

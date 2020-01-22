@@ -1,9 +1,24 @@
 import React from 'react'
 
-function Modal() {
+function Modal(props) {
+    const { profile, message, button } = props;
+
     return (
-        <div className="">
-            
+        <div className="modal fade" id="defaultModal" tabIndex="-1" role="dialog" aria-labelledby="modalTitle">
+            <div className="modal-dialog" role="document">
+                <div className="modal-content">
+                    <div className="modal-body">
+                        <div className="container">
+                            <div className="profile">
+                                profile
+                            </div>
+                            <div className="message">
+                                message
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     )
 }

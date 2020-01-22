@@ -1,0 +1,25 @@
+.sidebar {
+    padding-top: 80px;
+    width: 250px;
+    line-height: 60px;
+    font-size: 14px;
+    justify-content: start;
+    border-right: 1px solid #c3c3c3;
+}
+
+.sidebar::after {
+    border: 1px solid #c3c3c3;
+    opacity: 0.5;
+}
+
+.menu-item {
+    width: 100%;
+    padding-left: 40px;
+}
+.menu-item > i {
+    color: #b9b7ff;
+    font-size: 20px;
+    margin-right: 30px;
+    width: 25px;
+    height: 25px;;
+}

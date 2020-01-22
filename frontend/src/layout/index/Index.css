@@ -1,0 +1,26 @@
+.clubpetro {
+    font-size: 14px;
+    font-family: sans-serif;
+    color: #424242;
+}
+
+.ml-20 {
+    margin-left: 20px;
+}
+
+.bg-lg {
+    color: #8c8c8c !important;
+}
+
+.orange {
+    color: #f24e1e;
+}
+
+.active > i {
+    color: #ea5931 !important;
+}
+
+.active {
+    border-left: 2px solid #ea5931;
+    background-color: #eaeaea;
+}

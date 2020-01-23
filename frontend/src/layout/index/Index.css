@@ -20,6 +20,14 @@
     color: #7ed748;
 }
 
+.bg-green {
+    background-color: #7ed748;
+}
+
+.bg-orange {
+    background-color: #f24e1e;
+}
+
 .pink {
     color: #fe68a7;
 }
@@ -106,4 +114,20 @@
 
 .ml-15 {
     margin-left: 15px;
+}
+
+.va-middle {
+    vertical-align: middle !important;
+}
+
+.bg-yellow {
+    background-color: #f2e941;
+}
+
+.bg-red {
+    background-color: #EA001B;
+}
+
+.progress {
+    height: 5px;
 }

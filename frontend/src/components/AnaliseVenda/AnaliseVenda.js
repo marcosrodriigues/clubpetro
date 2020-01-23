@@ -39,24 +39,24 @@ function AnaliseVenda(props) {
                                     <td className="card-image-td">
                                         <img src={cardsIcon[venda.card]} className={"card-image-" + venda.card} alt={venda.card} />
                                     </td>
-                                    <td>
+                                    <td className="va-middle">
                                         <p>{venda.cardNumber}</p>
                                         <p className="description">Número do cartão</p>
                                     </td>
 
-                                    <td>
+                                    <td className="va-middle">
                                         <p>R$ {formatFloat(venda.valor, 2)}</p>
                                         <p className="description">Valor da compra</p>
                                     </td>
-                                    <td>
+                                    <td className="va-middle">
                                         <p>{formatFloat(venda.compra.valor, 4)} L</p>
                                         <p className="description">{venda.compra.tipo}</p>
                                     </td>
-                                    <td>
+                                    <td className="va-middle">
                                         <p>{venda.data}</p>
                                         <p className="description">Dia</p>    
                                     </td>
-                                    <td>
+                                    <td className="va-middle">
                                         <p>{venda.status}</p>
                                         <p className="description">Status</p>
                                     </td>

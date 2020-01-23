@@ -28,27 +28,69 @@ function ModalAlgoritmo(infos) {
                             <div className="row resposta">
                                 <p className="strong col-sm-4">Fraude</p>
                                 <div className="col-sm-8">
-                                    {venda.resposta.fraude} %
+                                <div className="row" htmlStyle="display: inline;">
+                                        <div className="col-sm-10">
+                                            <div className="progress">
+                                            <div className="progress-bar bg-red" role="progressbar" 
+                                                aria-valuenow={venda.resposta.fraude}
+                                                aria-valuemin="0"
+                                                aria-valuemax="100"
+                                                style={{"width": venda.resposta.fraude + "%"}} >
+                                            </div>
+                                        </div>
+                                        </div>
+                                        <div className="col-sm-1 gray">
+                                            {venda.resposta.fraude}%
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                             <div className="row resposta">
                                 <p className="strong col-sm-4">Erro do Frentista</p>
                                 <div className="col-sm-8">
-                                    {venda.resposta.erro} %
+                                    <div className="row" htmlStyle="display: inline;">
+                                        <div className="col-sm-10">
+                                            <div className="progress">
+                                            <div className="progress-bar bg-yellow" role="progressbar" 
+                                                aria-valuenow={venda.resposta.erro}
+                                                aria-valuemin="0"
+                                                aria-valuemax="100"
+                                                style={{"width": venda.resposta.erro + "%"}} >
+                                            </div>
+                                        </div>
+                                        </div>
+                                        <div className="col-sm-1 gray">
+                                            {venda.resposta.erro}%
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                             <div className="row resposta">
                                 <p className="strong col-sm-4">Fiel</p>
                                 <div className="col-sm-8">
-                                    {venda.resposta.fiel} %
+                                <div className="row" htmlStyle="display: inline;">
+                                        <div className="col-sm-10">
+                                            <div className="progress">
+                                            <div className="progress-bar bg-green" role="progressbar" 
+                                                aria-valuenow={venda.resposta.fiel}
+                                                aria-valuemin="0"
+                                                aria-valuemax="100"
+                                                style={{"width": venda.resposta.fiel + "%"}} >
+                                            </div>
+                                        </div>
+                                        </div>
+                                        <div className="col-sm-1 gray">
+                                            {venda.resposta.fiel}%
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
 
                             <div className="modal-button">
                                 <div className="center">
                                     <p className="strong">DECISÃO FINAL</p>
-                                    <button className="btn btn-danger btn-modal"><span class="strong">VENDA FRAUDULENTA</span></button>
-                                    <button className="btn btn-success btn-modal"><span class="strong">VENDA FIEL</span></button>
+                                    <button className="btn btn-danger btn-modal"><span className="strong">VENDA FRAUDULENTA</span></button>
+                                    <button className="btn btn-success btn-modal"><span className="strong">VENDA FIEL</span></button>
                                 </div>
                             </div>
                         </div>

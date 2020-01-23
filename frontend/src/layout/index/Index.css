@@ -95,3 +95,15 @@
     -webkit-appearance: none;
     -moz-appearance: none;
 }
+
+.justify {
+    text-align: justify;
+}
+
+.center {
+    text-align: center;;
+}
+
+.ml-15 {
+    margin-left: 15px;
+}

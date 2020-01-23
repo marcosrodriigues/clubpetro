@@ -6,7 +6,7 @@ import '@fortawesome/react-fontawesome'
 function Navbar() {
     return (
         <nav className="navbar" role="navigation">
-            <button className="sidebar-toggle button-href" data-toggle="push-menu" role="button">
+            <button className="sidebar-toggle button-href" data-toggle="push-menu">
                 <i className="fa fa-bars bg-lg"></i>
                 <span className="ml-20">
                     Anti-Fraude
@@ -27,7 +27,7 @@ function Navbar() {
 
                 <div className="profile">
                     <div className="avatar">
-                        <img src={require('../../../assets/img/me.jpg')} width="45" height="45" />
+                        <img src={require('../../../assets/img/me.jpg')} width="45" height="45" alt="Marcos Rodrigues" />
                     </div>
                     <div className="name">Marcos Rodrigues</div>
                 </div>

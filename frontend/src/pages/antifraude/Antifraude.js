@@ -2,7 +2,7 @@ import React from 'react';
 
 import Resumo from '../../components/Resumo/Resumo'
 import AnaliseVenda from '../../components/AnaliseVenda/AnaliseVenda'
-import Modal from '../../modal/Modal'
+import ModalAlgoritmo from '../../modal/ModalAlgoritmo'
 
 function Antifraude() {
     const resumo = [
@@ -28,7 +28,7 @@ function Antifraude() {
 
     const analiseVendas = {
         title: 'Análise de vendas',
-        modal: () => <Modal />,
+        modal: () => <ModalAlgoritmo />,
         vendas: [
             {
                 card: 'visa',

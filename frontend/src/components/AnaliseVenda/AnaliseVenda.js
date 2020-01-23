@@ -5,6 +5,8 @@ import './AnaliseVenda.css'
 import MastercardIcon from '../../assets/img/mastercard.png'
 import VisaIcon from '../../assets/img/visa.png'
 
+import ModalAlgoritmo from '../../modal/ModalAlgoritmo'
+
 function AnaliseVenda(props) {
     const [analises, setAnalise] = useState({ title: '', vendas: []})
 
@@ -59,9 +61,10 @@ function AnaliseVenda(props) {
                                         <p className="description">Status</p>
                                     </td>
                                     <td>
-                                        <button className="button-href" data-target="#defaultModal" data-toggle="modal" onClick={() => <analises.modal venda={venda} />}>
+                                        <button className="button-href" data-target={"#modalAlgoritmo_"+index} data-toggle="modal">
                                             <i className="fs-20 gray fa fa-ellipsis-h"></i>
                                         </button>
+                                        <ModalAlgoritmo venda={venda} id={index} />
                                     </td>
                                 </tr>
                             )

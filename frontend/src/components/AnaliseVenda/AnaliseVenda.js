@@ -2,8 +2,16 @@ import React, { useState, useEffect } from 'react';
 
 import './AnaliseVenda.css'
 
+import MastercardIcon from '../../assets/img/mastercard.png'
+import VisaIcon from '../../assets/img/visa.png'
+
 function AnaliseVenda(props) {
     const [analises, setAnalise] = useState({ title: '', vendas: []})
+
+    const cardsIcon = {
+        "master": MastercardIcon,
+        "visa": VisaIcon,
+    }
 
     useEffect(() => {
         async function initAnalise() {
@@ -11,7 +19,11 @@ function AnaliseVenda(props) {
             await setAnalise(analise);
         }
         initAnalise();
-    }, [analises]);
+    }, [analises, props]);
+
+    function formatFloat(value, fixed)  {
+        return value.toFixed(fixed).replace('.', ',')
+    }
 
     return (
         <div className="col-sm-12 mt-25">
@@ -21,9 +33,9 @@ function AnaliseVenda(props) {
                     {(analises.vendas.length > 0) ?
                         analises.vendas.map((venda, index) => {
                             return (
-                                <tr scope="row" className="table-analise" key={index}>
-                                    <td>
-                                        <img src={require('../../assets/img/visa.png')} width="50" height="15" />
+                                <tr className="table-analise" key={index}>
+                                    <td className="card-image-td">
+                                        <img src={cardsIcon[venda.card]} className={"card-image-" + venda.card} alt={venda.card} />
                                     </td>
                                     <td>
                                         <p>{venda.cardNumber}</p>
@@ -31,11 +43,11 @@ function AnaliseVenda(props) {
                                     </td>
 
                                     <td>
-                                        <p>R$ {venda.valor}</p>
+                                        <p>R$ {formatFloat(venda.valor, 2)}</p>
                                         <p className="description">Valor da compra</p>
                                     </td>
                                     <td>
-                                        <p>{venda.compra.valor} L</p>
+                                        <p>{formatFloat(venda.compra.valor, 4)} L</p>
                                         <p className="description">{venda.compra.tipo}</p>
                                     </td>
                                     <td>
@@ -47,16 +59,16 @@ function AnaliseVenda(props) {
                                         <p className="description">Status</p>
                                     </td>
                                     <td>
-                                        <a href="#">
+                                        <button className="button-href" data-target="#defaultModal" data-toggle="modal" onClick={() => <analises.modal venda={venda} />}>
                                             <i className="fs-20 gray fa fa-ellipsis-h"></i>
-                                        </a>
+                                        </button>
                                     </td>
                                 </tr>
                             )
                         })
                         :
-                        <tr scope="row" className="table-analise">
-                            <td colspan="7" className="center">Nenhuma venda para analisar</td>
+                        <tr className="table-analise">
+                            <td colSpan="7" className="center">Nenhuma venda para analisar</td>
                         </tr>
                     }
                 </tbody>

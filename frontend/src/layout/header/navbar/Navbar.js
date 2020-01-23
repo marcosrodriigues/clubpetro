@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 
 import './Navbar.css'
 import '@fortawesome/react-fontawesome'
@@ -6,12 +6,12 @@ import '@fortawesome/react-fontawesome'
 function Navbar() {
     return (
         <nav className="navbar" role="navigation">
-            <a href="#" className="sidebar-toggle" data-toggle="push-menu" role="button">
+            <button className="sidebar-toggle button-href" data-toggle="push-menu" role="button">
                 <i className="fa fa-bars bg-lg"></i>
                 <span className="ml-20">
                     Anti-Fraude
                 </span>
-            </a>
+            </button>
             <div className="navbar-menu">
                 <div className="menu bg-lg">
                     <div className="each-menu">

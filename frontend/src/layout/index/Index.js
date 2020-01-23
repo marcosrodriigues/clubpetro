@@ -5,7 +5,7 @@ import Sidebar from '../sidebar/Sidebar'
 import Modal from '../../modal/Modal'
 import RoutesConfig from '../../RoutesConfig'
 
-import { BrowserRouter as Router, Link, Switch, Route } from 'react-router-dom'
+import { BrowserRouter as Router } from 'react-router-dom'
 
 import './Index.css'
 

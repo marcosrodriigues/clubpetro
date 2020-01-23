@@ -1,18 +1,26 @@
 .table-analise {
     line-height: 5px;
-}
-
-.table-analise {
     font-size: 16px;
 }
 
 .table-analise td {
     padding-top: 20px;
-    vertical-align: middle;
     height: 40px;
     letter-spacing: 0.04em;
 }
 
 td .description {
     font-size: 12px !important;
+}
+
+.card-image-master {
+    width: 100%;
+}
+
+.card-image-visa {
+    width: 100%;
+}
+
+.card-image-td {
+    width: 70px;
 }

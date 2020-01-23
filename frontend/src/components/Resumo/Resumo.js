@@ -12,7 +12,7 @@ function Resumo(props) {
         }
 
         loadInitialResumo();
-    }, resumo);
+    }, [resumo, props]);
 
     return (
         <>

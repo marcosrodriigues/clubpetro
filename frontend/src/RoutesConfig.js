@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { BrowserRouter, Switch, Route } from "react-router-dom/cjs/react-router-dom"
+import { Switch, Route } from "react-router-dom/cjs/react-router-dom"
 import Dashboard from "./pages/dashboard/Dashboard"
 import Antifraude from './pages/antifraude/Antifraude'
 

@@ -1,7 +1,11 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 
 function Modal(props) {
-    const { profile, message, button } = props;
+    console.log(props);
+    
+    useEffect(() => {
+        console.log(props);
+    }, [props])
 
     return (
         <div className="modal fade" id="defaultModal" tabIndex="-1" role="dialog" aria-labelledby="modalTitle">

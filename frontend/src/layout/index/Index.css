@@ -16,6 +16,18 @@
     color: #f24e1e;
 }
 
+.green {
+    color: #7ed748;
+}
+
+.pink {
+    color: #fe68a7;
+}
+
+.color-alert {
+    color: #ffd18b
+}
+
 .active > i {
     color: #ea5931 !important;
 }
@@ -44,4 +56,25 @@
 
 .mt-25 {
     margin-top: 25px;
+}
+.description {
+    font-size: 14px;
+    font-weight: lighter;
+    color: #a09f9f;
+}
+
+.strong {
+    font-weight: bold !important;
+}
+
+.mb-25 {
+    margin-bottom: 25px;
+}
+
+.fs-20 {
+    font-size: 20px !important;
+}
+
+.gray {
+    color: #a09f9f;
 }

@@ -1,0 +1,10 @@
+.card-state {
+    border: 0.05em solid rgba(0,0,0,.125);
+}
+
+.card-state .card-value {
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+

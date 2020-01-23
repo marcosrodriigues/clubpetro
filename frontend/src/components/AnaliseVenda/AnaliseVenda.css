@@ -1,0 +1,18 @@
+.table-analise {
+    line-height: 5px;
+}
+
+.table-analise {
+    font-size: 16px;
+}
+
+.table-analise td {
+    padding-top: 20px;
+    vertical-align: middle;
+    height: 40px;
+    letter-spacing: 0.04em;
+}
+
+td .description {
+    font-size: 12px !important;
+}

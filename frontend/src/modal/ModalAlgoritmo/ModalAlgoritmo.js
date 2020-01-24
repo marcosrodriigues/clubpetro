@@ -28,7 +28,7 @@ function ModalAlgoritmo(infos) {
                             <div className="row resposta">
                                 <p className="strong col-sm-4">Fraude</p>
                                 <div className="col-sm-8">
-                                <div className="row" htmlStyle="display: inline;">
+                                <div className="row inline">
                                         <div className="col-sm-10">
                                             <div className="progress">
                                             <div className="progress-bar bg-red" role="progressbar" 
@@ -48,7 +48,7 @@ function ModalAlgoritmo(infos) {
                             <div className="row resposta">
                                 <p className="strong col-sm-4">Erro do Frentista</p>
                                 <div className="col-sm-8">
-                                    <div className="row" htmlStyle="display: inline;">
+                                    <div className="row inline">
                                         <div className="col-sm-10">
                                             <div className="progress">
                                             <div className="progress-bar bg-yellow" role="progressbar" 
@@ -68,7 +68,7 @@ function ModalAlgoritmo(infos) {
                             <div className="row resposta">
                                 <p className="strong col-sm-4">Fiel</p>
                                 <div className="col-sm-8">
-                                <div className="row" htmlStyle="display: inline;">
+                                <div className="row inline">
                                         <div className="col-sm-10">
                                             <div className="progress">
                                             <div className="progress-bar bg-green" role="progressbar" 

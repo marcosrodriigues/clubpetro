@@ -5,7 +5,8 @@ import './AnaliseVenda.css'
 import MastercardIcon from '../../assets/img/mastercard.png'
 import VisaIcon from '../../assets/img/visa.png'
 
-import ModalAlgoritmo from '../../modal/ModalAlgoritmo'
+import ModalAlgoritmo from '../../modal/ModalAlgoritmo/ModalAlgoritmo'
+import formatFloat from '../../util/Util';
 
 function AnaliseVenda(props) {
     const [analises, setAnalise] = useState({ title: '', vendas: []})
@@ -16,16 +17,12 @@ function AnaliseVenda(props) {
     }
 
     useEffect(() => {
-        async function initAnalise() {
+        function initAnalise() {
             const { analise } = props;
-            await setAnalise(analise);
+            setAnalise(analise);
         }
         initAnalise();
     }, [analises, props]);
-
-    function formatFloat(value, fixed)  {
-        return value.toFixed(fixed).replace('.', ',')
-    }
 
     return (
         <div className="col-sm-12 mt-25">

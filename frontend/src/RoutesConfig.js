@@ -21,7 +21,6 @@ function RoutesConfig() {
         }
     ]
 
-
     return (
         <Switch>
             {routes.map((route, index) => (

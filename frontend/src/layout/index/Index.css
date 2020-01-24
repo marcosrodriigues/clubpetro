@@ -131,3 +131,7 @@
 .progress {
     height: 5px;
 }
+
+.border-left {
+    border-left: 1px solid #c3c3c3;
+}

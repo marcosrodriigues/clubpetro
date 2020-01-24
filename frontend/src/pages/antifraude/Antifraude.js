@@ -2,7 +2,7 @@ import React from 'react';
 
 import Resumo from '../../components/Resumo/Resumo'
 import AnaliseVenda from '../../components/AnaliseVenda/AnaliseVenda'
-import ModalAlgoritmo from '../../modal/ModalAlgoritmo'
+import VendaCompleta from '../../components/VendaCompleta/VendaCompleta';
 
 function Antifraude() {
     const resumo = [
@@ -28,9 +28,11 @@ function Antifraude() {
 
     const analiseVendas = {
         title: 'Análise de vendas',
-        modal: () => <ModalAlgoritmo />,
         vendas: [
             {
+                profile: {
+                    name: 'Marcos Rodrigues'
+                },
                 card: 'visa',
                 cardNumber: '3210 **** **** 4008',
                 valor: 88.20,
@@ -47,6 +49,9 @@ function Antifraude() {
                 }
             },
             {
+                profile: {
+                    name: 'Pedro João'
+                },
                 card: 'master',
                 cardNumber: '4008 **** **** 9464',
                 valor: 66.40,
@@ -63,6 +68,9 @@ function Antifraude() {
                 }
             },
             {
+                profile: {
+                    name: 'João Felipe'
+                },
                 card: 'visa',
                 cardNumber: '3344 **** **** 9018',
                 valor: 32.40,
@@ -81,6 +89,75 @@ function Antifraude() {
         ]
     }
 
+    const vendasFraudulentas = {
+        title: 'Vendas fraudulentas confirmadas',
+        vendas: [
+            {
+                profile: {
+                    name: 'Pedro Valesse'
+                },
+                card: 'visa',
+                cardNumber: '1234 **** **** 5678',
+                valor: 576.00,
+                compra: {
+                    tipo: 'Gasolina',
+                    valor: 120.000
+                },
+                data: '01/09',
+                status: 'Fraude',
+                resposta: {
+                    fraude: 20,
+                    erro: 10,
+                    fiel:70
+                }
+            }
+        ]
+    }
+
+    const vendasFieis = {
+        title: 'Vendas validadas fieis',
+        vendas: [
+            {
+                profile: {
+                    name: 'Brenner Batista'
+                },
+                card: 'visa',
+                cardNumber: '1234 **** **** 5678',
+                valor: 119.040,
+                compra: {
+                    tipo: 'Gasolina',
+                    valor: 24.800
+                },
+                data: '14/07',
+                status: 'Fiel',
+                resposta: {
+                    fraude: 20,
+                    erro: 10,
+                    fiel:70
+                }
+            },
+            {
+                profile: {
+                    name: 'Thulio Ricomini'
+                },
+                card: 'visa',
+                cardNumber: '1234 **** **** 5678',
+                valor: 312.400,
+                compra: {
+                    tipo: 'Gasolina',
+                    valor: 65.000
+                },
+                data: '22/07',
+                status: 'Fiel',
+                resposta: {
+                    fraude: 20,
+                    erro: 10,
+                    fiel:70
+                }
+            }
+        ]
+    }
+
     return (
         <>
         <div className="row">
@@ -90,10 +167,10 @@ function Antifraude() {
             <AnaliseVenda analise={analiseVendas} />
         </div>
         <div className="row">
-
+            <VendaCompleta vendas={vendasFraudulentas} tipo={"Fraude"} />
         </div>
         <div className="row">
-
+            <VendaCompleta vendas={vendasFieis} tipo={"Fiel"} />
         </div>
         </>
     )

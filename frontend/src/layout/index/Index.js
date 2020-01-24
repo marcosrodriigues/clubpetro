@@ -17,7 +17,7 @@ function Index() {
                     <Sidebar></Sidebar>
                 </aside>
                 <main className="main-content">
-                    <div className="row">
+                    <div className="row border-left">
                         <div className="col-sm-12">
                             <RoutesConfig></RoutesConfig>
                         </div>

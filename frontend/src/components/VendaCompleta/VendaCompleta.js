@@ -5,6 +5,10 @@ import FielIco from '../../assets/img/fiel.png'
 import formatFloat from '../../util/Util';
 import ModalConfirmDialog from '../../modal/ModalConfirmDialog/ModalConfirmDialog';
 
+import MessageModalFiel from '../../json/MessageModalFiel';
+import MessageModalFraude from '../../json/MessageModalFraudulenta';
+
+
 function VendaCompleta(props) {
     const [vendas, setVendas] = useState({title: '', vendas: []});
     const [config, setConfig] = useState({});
@@ -16,11 +20,19 @@ function VendaCompleta(props) {
 
             let config = { };
 
-            config.icon = (tipo === "Fiel") ? FielIco : FraudeIco;
-            config.title = (tipo === "Fiel") ? "Venda Fiel" : "Venda Fraudelenta";
+            if (tipo === "Fiel") {
+                config.icon = FielIco;
+                config.title = "Venda Fiel";
+                config.modal = MessageModalFiel;
+            } else {
+                config.icon = FraudeIco;
+                config.title = "Venda Fraudulenta";
+                config.modal = MessageModalFraude;
+            }
 
             setConfig(config);
         }
+
         loadVendas();
     }, [props]);
 
@@ -58,10 +70,10 @@ function VendaCompleta(props) {
                                         <p className="description">Status</p>
                                     </td>
                                     <td>
-                                        <button className="button-href" data-target={"#modalConfirmDialog_"+index} data-toggle="modal">
+                                        <button className="button-href" data-target={"#modalConfirmDialog_"+venda.id} data-toggle="modal">
                                             <i className="fs-20 gray fa fa-ellipsis-h"></i>
                                         </button>
-                                        <ModalConfirmDialog venda={venda} id={index} />
+                                        <ModalConfirmDialog venda={venda} id={venda.id} message={config.modal} callbackFunction={props.callbackFunction} />
                                     </td>
                                 </tr>
                             )

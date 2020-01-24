@@ -1,0 +1,65 @@
+{
+    "title": "Análise de vendas",
+    "vendas": [
+        {
+            "id": 1,
+            "profile": {
+                "name": "Marcos Rodrigues"
+            },
+            "card": "visa",
+            "cardNumber": "3210 **** **** 4008",
+            "valor": 88.20,
+            "compra": {
+                "tipo": "Gasolina",
+                "valor": 18.375
+            },
+            "data": "22/06",
+            "status": "A validar",
+            "resposta": {
+                "fraude": 62,
+                "erro": 32,
+                "fiel": 9
+            }
+        },
+        {
+            "id": 2,
+            "profile": {
+                "name": "Pedro João"
+            },
+            "card": "master",
+            "cardNumber": "4008 **** **** 9464",
+            "valor": 66.40,
+            "compra": {
+                "tipo": "Diesel",
+                "valor": 21.149
+            },
+            "data": "12/07",
+            "status": "A validar",
+            "resposta": {
+                "fraude": 40,
+                "erro": 60,
+                "fiel":20
+            }
+        },
+        {
+            "id": 3,
+            "profile": {
+                "name": "João Felipe"
+            },
+            "card": "visa",
+            "cardNumber":"3344 **** **** 9018",
+            "valor": 32.40,
+            "compra": {
+                "tipo": "Etanol",
+                "valor": 9.000
+            },
+            "data": "18/08",
+            "status": "A validar",
+            "resposta": {
+                "fraude": 20,
+                "erro": 10,
+                "fiel":70
+            }
+        }
+    ]
+}

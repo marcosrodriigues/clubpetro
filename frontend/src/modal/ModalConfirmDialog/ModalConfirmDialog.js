@@ -2,12 +2,19 @@ import React, { useState, useEffect } from 'react';
 
 function ModalConfirmDialog(props) {
     const [venda, setVenda] = useState({});
+    const [message, setMessage] = useState({});
     const { id } = props;
 
     useEffect(() => {
-        const { venda } = props;
+        const { venda, message } = props;
         setVenda(venda);
-    }, [props]);
+        setMessage(message);
+    }, []);
+
+    function handleClick(e) {
+        e.preventDefault();
+        props.callbackFunction(venda);
+    }
 
     return (
         <div className="modal fade" id={"modalConfirmDialog_"+id } tabIndex="-1" role="dialog" aria-labelledby="ModalAlgoritmo">
@@ -18,14 +25,14 @@ function ModalConfirmDialog(props) {
                     </div>
                     <div className="modal-body">
                         <div className="container custom-font">
-                            <p className="strong">Resposta do algoritmo {venda.valor}</p>
-                            <p className="description justify">A resposta dada pelo nosso algoritmo sobre essa venda é dada pelos indicadores a baixo, além de analisar eles, entre em contato com os frentistas e tire suas próprias conclusões.</p>
+                            <p className="strong">{message.title} - {venda.valor}</p>
+                            <p className="description justify">{message.description}</p>
 
                             <div className="modal-button">
                                 <div className="center">
-                                    <p className="strong">DECISÃO FINAL</p>
-                                    <button className="btn btn-danger btn-modal"><span className="strong">VENDA FRAUDULENTA</span></button>
-                                    <button className="btn btn-success btn-modal"><span className="strong">VENDA FIEL</span></button>
+                                    <p className="strong">Você deseja voltar atras?</p>
+                                    <button className="btn btn-danger btn-modal" data-dismiss="modal"><span className="strong">NÃO</span></button>
+                                    <button className="btn btn-success btn-modal" onClick={handleClick}><span className="strong">SIM, DESEJO</span></button>
                                 </div>
                             </div>
                         </div>

@@ -1,0 +1,20 @@
+[
+    { 
+        "type": "Vendas em débito",
+        "value": "124.800",
+        "chart": "/img/chart-debito.png",
+        "arrow": "fa fa-arrow-up green"
+    },
+    { 
+        "type": "Vendas em crédito",
+        "value": "56.400",
+        "chart": "img/chart-credito.png",
+        "arrow": "fa fa-arrow-up color-alert"
+    },
+    {
+        "type": "Fraudes Confirmadas",
+        "value": "1.800",
+        "chart": "/img/chart-fraude.png",
+        "arrow": "fa fa-arrow-down pink"
+    }
+]

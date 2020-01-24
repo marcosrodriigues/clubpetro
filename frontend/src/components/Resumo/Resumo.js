@@ -26,7 +26,9 @@ function Resumo(props) {
                             </div>
                             <div className="row description">{state.type}</div>
                         </div>
-                        <div className="col-sm-6 right">{<state.chart />}</div>
+                        <div className="col-sm-6 right">
+                            <img src={(state.chart.toString())} alt={state.type} />
+                        </div>
                     </div>
                 </div>
             </div>

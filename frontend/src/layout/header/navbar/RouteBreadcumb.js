@@ -12,6 +12,7 @@ function RouteBreadcumb() {
         { path: '/relatorios', text: 'Relatórios' },
         { path: '/perfil', text: 'Perfil' },
         { path: '/campanhas', text: 'Campanhas' },
+        { path: '/', text: 'Dashboard'},
     ]
 
     return (

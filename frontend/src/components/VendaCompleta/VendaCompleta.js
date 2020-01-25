@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from 'react'
 
-import FraudeIco from '../../assets/img/fraude.png'
-import FielIco from '../../assets/img/fiel.png'
 import formatFloat from '../../util/Util';
 import ModalConfirmDialog from '../../modal/ModalConfirmDialog/ModalConfirmDialog';
 
@@ -14,6 +12,9 @@ function VendaCompleta(props) {
     const [config, setConfig] = useState({});
 
     const title = props.title;
+
+    const FraudeIco = '/img/fraude.png';
+    const FielIco = '/img/fiel.png';
 
     useEffect(() => {
         function loadVendas() {

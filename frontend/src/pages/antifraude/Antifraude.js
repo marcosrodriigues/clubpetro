@@ -11,16 +11,26 @@ import VendasFieis from '../../json/VendasFieis'
 
 function Antifraude() {
     const [resumo] = useState(ResumoJson);
-    const [analiseVendas] = useState(AnaliseVendaJson);
-    const [vendasFraudulentas] = useState(VendasFraudulentas);
-    const [vendasFieis] = useState(VendasFieis);
+    const [analiseVendas, setAnaliseVendas] = useState(AnaliseVendaJson);
+    const [vendasFraudulentas, setVendasFraudulentas] = useState(VendasFraudulentas);
+    const [vendasFieis, setVendasFieis] = useState(VendasFieis);
 
     const callbackFraude = function (venda) {
-        console.log("fr:" + venda)
+        if(venda) {
+            setAnaliseVendas({title: analiseVendas.title, vendas : [...analiseVendas.vendas, venda]});
+            let vendas = [...vendasFraudulentas.vendas];
+            let novas_vendas = vendas.filter(v => v.id != venda.id)
+            setVendasFraudulentas({title: "Vendas fraudulentas confirmadas", vendas: novas_vendas});
+        }
     }
 
     const callbackFiel = function (venda) {
-        console.log(venda)
+        if(venda) {
+            setAnaliseVendas({title: analiseVendas.title, vendas : [...analiseVendas.vendas, venda]});
+            let vendas = [...vendasFraudulentas.vendas];
+            let novas_vendas = vendas.filter(v => v.id != venda.id)
+            setVendasFieis({title: "Vendas validadas fieis", vendas: novas_vendas});
+        }
     }
 
     return (
@@ -32,7 +42,7 @@ function Antifraude() {
             <AnaliseVenda analise={analiseVendas} />
         </div>
         <div className="row">
-            <VendaCompleta vendas={vendasFraudulentas} callbackFunction={(venda) => callbackFraude(venda)} tipo={"Fraude"} />
+            <VendaCompleta vendas={vendasFraudulentas} callbackFunction={callbackFraude} tipo={"Fraude"} />
         </div>
         <div className="row">
             <VendaCompleta vendas={vendasFieis} tipo={"Fiel"} callbackFunction={callbackFiel} />

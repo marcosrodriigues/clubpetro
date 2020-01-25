@@ -9,7 +9,7 @@ function ModalConfirmDialog(props) {
         const { venda, message } = props;
         setVenda(venda);
         setMessage(message);
-    }, []);
+    }, [props]);
 
     function handleClick(e) {
         e.preventDefault();
@@ -32,7 +32,7 @@ function ModalConfirmDialog(props) {
                                 <div className="center">
                                     <p className="strong">Você deseja voltar atras?</p>
                                     <button className="btn btn-danger btn-modal" data-dismiss="modal"><span className="strong">NÃO</span></button>
-                                    <button className="btn btn-success btn-modal" onClick={handleClick}><span className="strong">SIM, DESEJO</span></button>
+                                    <button className="btn btn-success btn-modal" data-dismiss="modal" onClick={handleClick}><span className="strong">SIM, DESEJO</span></button>
                                 </div>
                             </div>
                         </div>

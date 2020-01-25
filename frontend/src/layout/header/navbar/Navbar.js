@@ -28,7 +28,7 @@ function Navbar() {
 
                 <div className="profile">
                     <div className="avatar">
-                        <img src={require('../../../assets/img/me.jpg')} width="45" height="45" alt="Marcos Rodrigues" />
+                        <img src={'/img/me.jpg'} width="45" height="45" alt="Marcos Rodrigues" />
                     </div>
                     <div className="name">Marcos Rodrigues</div>
                 </div>

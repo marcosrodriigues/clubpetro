@@ -2,15 +2,15 @@ import React, { useState, useEffect } from 'react';
 
 import './AnaliseVenda.css'
 
-import MastercardIcon from '../../assets/img/mastercard.png'
-import VisaIcon from '../../assets/img/visa.png'
-
 import ModalAlgoritmo from '../../modal/ModalAlgoritmo/ModalAlgoritmo'
 import formatFloat from '../../util/Util';
 
 function AnaliseVenda(props) {
     const [analises, setAnalise] = useState([])
     const title = props.title;
+
+    const MastercardIcon = '/img/mastercard.png';
+    const VisaIcon = '/img/visa.png';
 
     const cardsIcon = {
         "master": MastercardIcon,

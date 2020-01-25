@@ -2,6 +2,7 @@ import React from 'react'
 
 import './Navbar.css'
 import '@fortawesome/react-fontawesome'
+import Breadcumb from './RouteBreadcumb';
 
 function Navbar() {
     return (
@@ -9,7 +10,7 @@ function Navbar() {
             <button className="sidebar-toggle button-href" data-toggle="push-menu">
                 <i className="fa fa-bars bg-lg"></i>
                 <span className="ml-20">
-                    Anti-Fraude
+                    <Breadcumb></Breadcumb>
                 </span>
             </button>
             <div className="navbar-menu">

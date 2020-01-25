@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/clubpetro/frontend/static/css/main.6602ce8f.chunk.css",
+    "main.js": "/clubpetro/frontend/static/js/main.e0301d86.chunk.js",
+    "main.js.map": "/clubpetro/frontend/static/js/main.e0301d86.chunk.js.map",
+    "runtime-main.js": "/clubpetro/frontend/static/js/runtime-main.6c35633f.js",
+    "runtime-main.js.map": "/clubpetro/frontend/static/js/runtime-main.6c35633f.js.map",
+    "static/css/2.199f19cf.chunk.css": "/clubpetro/frontend/static/css/2.199f19cf.chunk.css",
+    "static/js/2.121555fe.chunk.js": "/clubpetro/frontend/static/js/2.121555fe.chunk.js",
+    "static/js/2.121555fe.chunk.js.map": "/clubpetro/frontend/static/js/2.121555fe.chunk.js.map",
+    "index.html": "/clubpetro/frontend/index.html",
+    "precache-manifest.2f79192b4ac920e7447d271efd4a9171.js": "/clubpetro/frontend/precache-manifest.2f79192b4ac920e7447d271efd4a9171.js",
+    "service-worker.js": "/clubpetro/frontend/service-worker.js",
+    "static/css/2.199f19cf.chunk.css.map": "/clubpetro/frontend/static/css/2.199f19cf.chunk.css.map",
+    "static/css/main.6602ce8f.chunk.css.map": "/clubpetro/frontend/static/css/main.6602ce8f.chunk.css.map",
+    "static/js/2.121555fe.chunk.js.LICENSE": "/clubpetro/frontend/static/js/2.121555fe.chunk.js.LICENSE",
+    "static/media/font-awesome.min.css": "/clubpetro/frontend/static/media/fontawesome-webfont.fee66e71.woff"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.6c35633f.js",
+    "static/css/2.199f19cf.chunk.css",
+    "static/js/2.121555fe.chunk.js",
+    "static/css/main.6602ce8f.chunk.css",
+    "static/js/main.e0301d86.chunk.js"
+  ]
+}

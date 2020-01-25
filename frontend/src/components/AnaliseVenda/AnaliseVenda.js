@@ -9,7 +9,8 @@ import ModalAlgoritmo from '../../modal/ModalAlgoritmo/ModalAlgoritmo'
 import formatFloat from '../../util/Util';
 
 function AnaliseVenda(props) {
-    const [analises, setAnalise] = useState({ title: '', vendas: []})
+    const [analises, setAnalise] = useState([])
+    const title = props.title;
 
     const cardsIcon = {
         "master": MastercardIcon,
@@ -24,13 +25,13 @@ function AnaliseVenda(props) {
         initAnalise();
     }, [analises, props]);
 
-    return (
+   return (
         <div className="col-sm-12 mt-25">
-            <p className="description strong mb-25">{analises.title}</p>
+            <p className="description strong mb-25">{title}</p>
             <table className="table">
                 <tbody>
-                    {(analises.vendas.length > 0) ?
-                        analises.vendas.map((venda, index) => {
+                    {(analises.length > 0) ?
+                        analises.map((venda, index) => {
                             return (
                                 <tr className="table-analise" key={index}>
                                     <td className="card-image-td">
@@ -61,7 +62,7 @@ function AnaliseVenda(props) {
                                         <button className="button-href" data-target={"#modalAlgoritmo_"+index} data-toggle="modal">
                                             <i className="fs-20 gray fa fa-ellipsis-h"></i>
                                         </button>
-                                        <ModalAlgoritmo venda={venda} id={index} />
+                                        <ModalAlgoritmo venda={venda} id={index} callbackFunction={props.callbackFunction} />
                                     </td>
                                 </tr>
                             )

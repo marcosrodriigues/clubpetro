@@ -10,8 +10,10 @@ import MessageModalFraude from '../../json/MessageModalFraudulenta';
 
 
 function VendaCompleta(props) {
-    const [vendas, setVendas] = useState({title: '', vendas: []});
+    const [vendas, setVendas] = useState([]);
     const [config, setConfig] = useState({});
+
+    const title = props.title;
 
     useEffect(() => {
         function loadVendas() {
@@ -38,11 +40,11 @@ function VendaCompleta(props) {
 
     return (
         <div className="col-sm-12 mt-25">
-            <p className="description strong mb-25">{vendas.title}</p>
+            <p className="description strong mb-25">{title}</p>
             <table className="table">
                 <tbody>
-                    {(vendas.vendas.length > 0) ?
-                        vendas.vendas.map((venda, index) => {
+                    {(vendas.length > 0) ?
+                        vendas.map((venda, index) => {
                             return (
                                 <tr className="table-analise" key={index}>
                                     <td className="card-image-td">

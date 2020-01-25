@@ -1,0 +1,12 @@
+.my-modal-header {
+    width: 100%;;
+    padding-top: 5px;
+}
+
+.mt-green {
+    border-top: 10px solid #3cd604;
+}
+
+.mt-red {
+    border-top: 10px solid #ea001b;
+}

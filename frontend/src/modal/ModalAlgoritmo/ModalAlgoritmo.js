@@ -13,6 +13,16 @@ function ModalAlgoritmo(infos) {
         }
     }, [infos])
 
+    function handleFraude(e) {
+        e.preventDefault();
+        infos.callbackFunction(venda, "FRAUDE");
+    }
+
+    function handleFiel(e) {
+        e.preventDefault();
+        infos.callbackFunction(venda, "FIEL");
+    }
+
     return (
         <div className="modal fade" id={"modalAlgoritmo_"+id } tabIndex="-1" role="dialog" aria-labelledby="ModalAlgoritmo">
             <div className="modal-dialog modal-dialog-centered" role="document">
@@ -89,8 +99,8 @@ function ModalAlgoritmo(infos) {
                             <div className="modal-button">
                                 <div className="center">
                                     <p className="strong">DECISÃO FINAL</p>
-                                    <button className="btn btn-danger btn-modal"><span className="strong">VENDA FRAUDULENTA</span></button>
-                                    <button className="btn btn-success btn-modal"><span className="strong">VENDA FIEL</span></button>
+                                    <button className="btn btn-danger btn-modal" data-dismiss="modal"><span className="strong" onClick={handleFraude}>VENDA FRAUDULENTA</span></button>
+                                    <button className="btn btn-success btn-modal" data-dismiss="modal"><span className="strong" onClick={handleFiel}>VENDA FIEL</span></button>
                                 </div>
                             </div>
                         </div>

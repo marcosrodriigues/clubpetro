@@ -17,20 +17,34 @@ function Antifraude() {
 
     const callbackFraude = function (venda) {
         if(venda) {
-            setAnaliseVendas({title: analiseVendas.title, vendas : [...analiseVendas.vendas, venda]});
-            let vendas = [...vendasFraudulentas.vendas];
-            let novas_vendas = vendas.filter(v => v.id != venda.id)
-            setVendasFraudulentas({title: "Vendas fraudulentas confirmadas", vendas: novas_vendas});
+            setAnaliseVendas([...analiseVendas, venda]);
+            let vendas = vendasFraudulentas;
+            let novas_vendas = vendas.filter(v => v.id !== venda.id)
+            setVendasFraudulentas(novas_vendas);
         }
     }
 
     const callbackFiel = function (venda) {
         if(venda) {
-            setAnaliseVendas({title: analiseVendas.title, vendas : [...analiseVendas.vendas, venda]});
-            let vendas = [...vendasFraudulentas.vendas];
-            let novas_vendas = vendas.filter(v => v.id != venda.id)
-            setVendasFieis({title: "Vendas validadas fieis", vendas: novas_vendas});
+            setAnaliseVendas([...analiseVendas, venda]);
+            let vendas = vendasFieis;
+            let novas_vendas = vendas.filter(v => v.id !== venda.id)
+            setVendasFieis(novas_vendas);
         }
+    }
+
+    const callbackAnalise = function(venda, novo_status) {
+        let analises = analiseVendas;
+        let novas_analises = analises.filter(a => a.id !== venda.id);
+        setAnaliseVendas(novas_analises);
+        if (novo_status === "FIEL") {
+            venda.status = "Fiel";
+            setVendasFieis([...vendasFieis, venda])
+        } else if (novo_status === "FRAUDE") {
+            venda.status = "Fraude";
+            setVendasFraudulentas([...vendasFraudulentas, venda])
+        }
+        return;
     }
 
     return (
@@ -39,13 +53,13 @@ function Antifraude() {
             <Resumo state={resumo} />
         </div>
         <div className="row">
-            <AnaliseVenda analise={analiseVendas} />
+            <AnaliseVenda analise={analiseVendas} callbackFunction={callbackAnalise} title={"Análise de vendas"} />
         </div>
         <div className="row">
-            <VendaCompleta vendas={vendasFraudulentas} callbackFunction={callbackFraude} tipo={"Fraude"} />
+            <VendaCompleta vendas={vendasFraudulentas} callbackFunction={callbackFraude} tipo={"Fraude"} title={"Vendas fraudulentas confirmadas"} />
         </div>
         <div className="row">
-            <VendaCompleta vendas={vendasFieis} tipo={"Fiel"} callbackFunction={callbackFiel} />
+            <VendaCompleta vendas={vendasFieis} callbackFunction={callbackFiel} tipo={"Fiel"} title={"Vendas validadas fieis"} />
         </div>
         </>
     )

@@ -1,45 +1,42 @@
-{
-    "title": "Vendas validadas fieis",
-    "vendas": [
-        {
-            "id": 5,
-            "profile": {
-                "name": "Brenner Batista"
-            },
-            "card": "visa",
-            "cardNumber": "1234 **** **** 5678",
-            "valor": 119.040,
-            "compra": {
-                "tipo": "Gasolina",
-                "valor": 24.800
-            },
-            "data": "14/07",
-            "status": "Fiel",
-            "resposta": {
-                "fraude": 20,
-                "erro": 10,
-                "fiel":70
-            }
+[
+    {
+        "id": 5,
+        "profile": {
+            "name": "Brenner Batista"
         },
-        {
-            "id": 6,
-            "profile": {
-                "name": "Thulio Ricomini"
-            },
-            "card": "visa",
-            "cardNumber": "1234 **** **** 5678",
-            "valor": 312.400,
-            "compra": {
-                "tipo": "Gasolina",
-                "valor": 65.000
-            },
-            "data": "22/07",
-            "status": "Fiel",
-            "resposta": {
-                "fraude": 20,
-                "erro": 10,
-                "fiel":70
-            }
+        "card": "master",
+        "cardNumber": "1234 **** **** 5678",
+        "valor": 119.040,
+        "compra": {
+            "tipo": "Gasolina",
+            "valor": 24.800
+        },
+        "data": "14/07",
+        "status": "Fiel",
+        "resposta": {
+            "fraude": 20,
+            "erro": 10,
+            "fiel":70
         }
-    ]
-}
+    },
+    {
+        "id": 6,
+        "profile": {
+            "name": "Thulio Ricomini"
+        },
+        "card": "visa",
+        "cardNumber": "1234 **** **** 5678",
+        "valor": 312.400,
+        "compra": {
+            "tipo": "Gasolina",
+            "valor": 65.000
+        },
+        "data": "22/07",
+        "status": "Fiel",
+        "resposta": {
+            "fraude": 20,
+            "erro": 10,
+            "fiel":70
+        }
+    }
+]

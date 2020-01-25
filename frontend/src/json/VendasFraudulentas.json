@@ -1,25 +1,22 @@
-{ 
-    "title": "Vendas fraudulentas confirmadas",
-    "vendas": [
-        {
-            "id": 4,
-            "profile": {
-                "name": "Pedro Valesse"
-            },
-            "card": "visa",
-            "cardNumber": "1234 **** **** 5678",
-            "valor": 576.00,
-            "compra": {
-                "tipo": "Gasolina",
-                "valor": 120.000
-            },
-            "data": "01/09",
-            "status": "Fraude",
-            "resposta": {
-                "fraude": 20,
-                "erro": 10,
-                "fiel":70
-            }
+[
+    {
+        "id": 4,
+        "profile": {
+            "name": "Pedro Valesse"
+        },
+        "card": "master",
+        "cardNumber": "1234 **** **** 5678",
+        "valor": 576.00,
+        "compra": {
+            "tipo": "Gasolina",
+            "valor": 120.000
+        },
+        "data": "01/09",
+        "status": "Fraude",
+        "resposta": {
+            "fraude": 20,
+            "erro": 10,
+            "fiel":70
         }
-    ]
-}
+    }
+]

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 
 import Header from '../header/Header'
 import Sidebar from '../sidebar/Sidebar'
@@ -9,12 +9,18 @@ import { BrowserRouter as Router } from 'react-router-dom'
 import './Index.css'
 
 function Index() {
+    const [isOpen, setIsOpen] = useState(true);
+
+    function toggleOpen(e) {
+        setIsOpen(!isOpen);
+    }
+
     return (
         <div className="clubpetro wrapper">
             <Router>
-                <Header></Header>
+                <Header toggleSidebar={toggleOpen} open={isOpen}></Header>
                 <aside className="main-sidebar">
-                    <Sidebar></Sidebar>
+                    <Sidebar open={isOpen}></Sidebar>
                 </aside>
                 <main className="main-content">
                     <div className="row border-left">

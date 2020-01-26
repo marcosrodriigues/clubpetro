@@ -1,12 +1,19 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 
 import { Link } from 'react-router-dom'
 
 import './Sidebar.css'
 
-function Sidebar() {
+function Sidebar({open}) {
+    const [display, setDisplay] = useState("");
+
+    useEffect(() => {
+        if (open) setDisplay("");
+        else setDisplay("none");
+    }, [open])
+
     return (
-        <section className="sidebar">
+        <section className="sidebar" style={{display: display}}>
             <div className="menu-item">
                 <Link to="/dashboard">
                     <i className="fa fa-clock-o"></i>

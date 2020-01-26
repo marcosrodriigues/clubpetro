@@ -5,12 +5,13 @@ import Navbar from './navbar/Navbar'
 
 import './Header.css'
 
-function Header() {
+function Header({toggleSidebar, open}) {
+
     return (
         <>
         <header className="main-header">
-            <Logo></Logo>
-            <Navbar></Navbar>
+            <Logo open={open}></Logo>
+            <Navbar toggleSidebar={toggleSidebar}></Navbar>
         </header>
         </>
     )

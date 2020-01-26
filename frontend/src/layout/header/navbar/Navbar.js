@@ -4,15 +4,26 @@ import './Navbar.css'
 import '@fortawesome/react-fontawesome'
 import Breadcumb from './RouteBreadcumb';
 
-function Navbar() {
+function Navbar({toggleSidebar}) {
+
+    function setSidebar(e) {
+        e.preventDefault();
+        toggleSidebar(true);
+    }
+
     return (
         <nav className="navbar" role="navigation">
-            <button className="sidebar-toggle button-href" data-toggle="push-menu">
+            <div>
+            <button className="sidebar-toggle button-href" onClick={setSidebar} >
                 <i className="fa fa-bars bg-lg"></i>
+            </button>
+            <div className="breadcumb-text">
                 <span className="ml-20">
                     <Breadcumb></Breadcumb>
-                </span>
-            </button>
+                </span>                
+            </div>
+            
+            </div>
             <div className="navbar-menu">
                 <div className="menu bg-lg">
                     <div className="each-menu">

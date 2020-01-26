@@ -48,3 +48,10 @@
     margin-left: 10px;
     vertical-align: middle;
 }
+
+.breadcumb-text {
+    float: left;
+    margin: 0;
+    font-size: 1rem;
+    vertical-align: middle;
+}

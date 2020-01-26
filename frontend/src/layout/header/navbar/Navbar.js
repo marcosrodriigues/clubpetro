@@ -1,14 +1,26 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 import './Navbar.css'
 import '@fortawesome/react-fontawesome'
 import Breadcumb from './RouteBreadcumb';
 
 function Navbar({toggleSidebar}) {
+    const [search, setSearch] = useState(false);
+    const [message, setMessage] = useState(false);
+    const [bell, setBell] = useState(false);
 
     function setSidebar(e) {
         e.preventDefault();
         toggleSidebar(true);
+    }
+
+    function showSearch(e) {
+        e.preventDefault();
+        if (search) {
+            alert('Pesquisa indisponível');
+            return;
+        }
+        setSearch(true);
     }
 
     return (
@@ -27,13 +39,16 @@ function Navbar({toggleSidebar}) {
             <div className="navbar-menu">
                 <div className="menu bg-lg">
                     <div className="each-menu">
-                        <i className="fa fa-search" />
+                        <div style={{ display: search ? 'inline-flex' : 'none', marginRight: search ? '15px' : '0px' }} className="">
+                            <input type="text" className="form-control" placeholder="Pesquisar..." />
+                        </div>
+                        <i className="fa fa-search" onClick={showSearch} />
                     </div>
                     <div className="each-menu">
-                        <i className="fa fa-envelope" />
+                        <i className="fa fa-envelope" onClick={showSearch} />
                     </div>
                     <div className="each-menu">
-                        <i className="fa fa-bell" />
+                        <i className="fa fa-bell" onClick={showSearch} />
                     </div>
                 </div>
 

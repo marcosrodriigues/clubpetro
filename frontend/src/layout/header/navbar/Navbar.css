@@ -28,6 +28,7 @@
 
 .each-menu {
     margin-left: 30px;
+    cursor: pointer;
 }
 
 .profile {

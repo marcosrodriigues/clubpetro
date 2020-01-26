@@ -9,7 +9,7 @@ function RoutesConfig() {
         {
             path: '/',
             exact: true,
-            main: () => <Dashboard />
+            main: () => <Antifraude />
         }, 
         {
             path: '/dashboard',

@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "07044dd3c944629ffe43a5b8226e5f0b",
+    "revision": "1b7a75416b5e34e94d4511786d696d3d",
     "url": "/clubpetro/frontend/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/clubpetro/frontend/static/css/2.199f19cf.chunk.css"
   },
   {
-    "revision": "1ad6d0646db537f97131",
+    "revision": "3d6c8b466c70ad30fa7c",
     "url": "/clubpetro/frontend/static/css/main.6602ce8f.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/clubpetro/frontend/static/js/2.121555fe.chunk.js.LICENSE"
   },
   {
-    "revision": "1ad6d0646db537f97131",
-    "url": "/clubpetro/frontend/static/js/main.e0301d86.chunk.js"
+    "revision": "3d6c8b466c70ad30fa7c",
+    "url": "/clubpetro/frontend/static/js/main.460ae205.chunk.js"
   },
   {
     "revision": "6e649ce86f0d37c14923",

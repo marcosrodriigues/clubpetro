@@ -34,6 +34,7 @@
 .profile {
     display: flex;
     vertical-align: middle;
+    cursor: pointer;
 }
 
 .profile .avatar img {
@@ -55,4 +56,33 @@
     margin: 0;
     font-size: 1rem;
     vertical-align: middle;
+}
+
+.my-box {
+    width: 220px;
+    height: 245px;
+    position: absolute;
+    z-index: 999;
+    border: 1px solid;
+    background-color: #ccc;
+}
+.my-bell {
+    right: 115px;
+}
+
+.my-message {
+    right: 170px;
+}
+
+.notification {
+    font-size: 10px !important;
+    vertical-align: top;;
+    position: relative;
+    border-radius: 50%;
+    color: orangered;
+}
+
+.my-profile {
+    right: 0;
+    top: 75px;
 }

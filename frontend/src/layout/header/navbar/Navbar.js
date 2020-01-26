@@ -4,10 +4,11 @@ import './Navbar.css'
 import '@fortawesome/react-fontawesome'
 import Breadcumb from './RouteBreadcumb';
 
-function Navbar({toggleSidebar}) {
+function Navbar({toggleSidebar, user}) {
     const [search, setSearch] = useState(false);
     const [message, setMessage] = useState(false);
     const [bell, setBell] = useState(false);
+    const [profile, setProfile] = useState(false);
 
     function setSidebar(e) {
         e.preventDefault();
@@ -21,6 +22,27 @@ function Navbar({toggleSidebar}) {
             return;
         }
         setSearch(true);
+    }
+
+    function showMessage(e) {
+        e.preventDefault();
+        setBell(false);
+        setMessage(!message);
+        setProfile(false);
+    }
+
+    function showBell(e) {
+        e.preventDefault();
+        setMessage(false);
+        setBell(!bell);
+        setProfile(false);
+    }
+
+    function showProfile(e) {
+        e.preventDefault();
+        setMessage(false);
+        setBell(false);
+        setProfile(!profile);
     }
 
     return (
@@ -45,18 +67,40 @@ function Navbar({toggleSidebar}) {
                         <i className="fa fa-search" onClick={showSearch} />
                     </div>
                     <div className="each-menu">
-                        <i className="fa fa-envelope" onClick={showSearch} />
+                        <i className="fa fa-envelope" onClick={showMessage}>
+                            <i className="notification fa fa-circle orange" />
+                        </i>
+                        {message ? 
+                            <div className="my-box my-message">
+                                message
+                            </div>
+                            :""}
                     </div>
+                   
                     <div className="each-menu">
-                        <i className="fa fa-bell" onClick={showSearch} />
+                        <i className="fa fa-bell" onClick={showBell}>
+                            <i className={!bell ? "notification fa fa-circle orange" : ""} />
+                        </i>
+                        {bell ? 
+                        <div className="my-box my-bell">
+                            bells
+                        </div>
+                        :""}
                     </div>
                 </div>
 
-                <div className="profile">
+                <div className="profile" onClick={showProfile}>
                     <div className="avatar">
-                        <img src={'/img/me.jpg'} width="45" height="45" alt="Marcos Rodrigues" />
+                        <img src={user.avatar} width="45" height="45" alt="Marcos Rodrigues" />
                     </div>
-                    <div className="name">Marcos Rodrigues</div>
+                    <div className="name">{user.name}</div>
+                    {profile ? 
+                        <div className="my-box my-profile">
+                            profile
+                        </div>
+                    : ""
+                    }
+                    
                 </div>
             </div>
         </nav>

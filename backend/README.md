@@ -1,2 +1,2 @@
-# ClubPetro - Backend
+# ClubPetro Backend
 

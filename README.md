@@ -5,11 +5,11 @@ Repositório destinado aos projetos de frontend e backend do projeto ClubPetro. 
 Para começar, faça o download do sistema com um _git clone_.
 ```
 git clone https://github.com/marcosrodriigues/clubpetro.git
-&& cd clubpetro
+cd clubpetro
 ```
 Dentro da pasta clubpetro há duas pastas, [frontend](https://github.com/marcosrodriigues/clubpetro/tree/master/frontend) e [backend](https://github.com/marcosrodriigues/clubpetro/tree/master/backend). Cada página é referente a uma camada do  sistema clubpetro.  A seguir é apresentado cada projeto e como executá-lo.
 
-## frontend
+## Executando o Frontend
 
 Na pasta [frontend](https://github.com/marcosrodriigues/clubpetro/tree/master/frontend) se encontra o frontend do projeto. As tecnologias que envolvem o projeto estão listadas abaixo:
 - Yarn v1.21.1
@@ -25,9 +25,9 @@ Aguarde o _npm install_ terminar de executar. Isto pode levar alguns minutos. De
 ```
 yarn start
 ```
-Após o projeto iniciar, acesse seu _[localhost](http://localhost:3000/)_ para navegar na aplicação.
+Após o projeto iniciar, acesse o endereço  _[http://localhost:3030](http://localhost:3000/)_ em seu navegador para começar a navegar na aplicação.
 
-## backend
+## Executando o Backend
 
 Na pasta [backend](https://github.com/marcosrodriigues/clubpetro/tree/master/backend) se encontra o backend do projeto. As tecnologias que envolvem o sistema estão descritas abaixo:
 - NodeJS v12.14.1
@@ -44,6 +44,6 @@ Aguarde o _npm install_ terminar de executar. Isto pode levar alguns minutos. De
 ```
 yarn dev
 ```
-Após o projeto iniciar, acesse seu _[localhost](http://localhost:3000/)_ para navegar na API.
+Após o projeto iniciar, acesse o endereço  _[http://localhost:3030](http://localhost:3000/)_ em seu navegador para começar a navegar na API
 
 Você também pode acessar a pasta [backend](https://github.com/marcosrodriigues/clubpetro/tree/master/backend)  e conhecer todos os endpoints da aplicação, detalhados no README.md

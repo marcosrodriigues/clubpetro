@@ -54,7 +54,7 @@ A seguir estão listadas os endpoints da API do ClubPetro.
 	- Cadastra uma venda
 
 ## Cadastro de venda
-Uma vez com o servidor rodando, para se cadastrar uma nova venda, basta enviar uma requisição com o método _POST_ para o endpoint _/venda_. O endpoint _/venda_ recebe como parâmetro a seguinte estrutura JSON:
+Uma vez com o servidor rodando, para cadastrar uma nova venda, basta enviar uma requisição com o método _POST_ para o endpoint _/venda_. O endpoint _/venda_ recebe como parâmetro a seguinte estrutura JSON:
 
 ```
 {

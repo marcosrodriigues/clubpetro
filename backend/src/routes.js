@@ -10,6 +10,8 @@ const routes = Router();
 routes.get('/', IndexController.index)
 routes.get('/seed', IndexController.seed)
 routes.get('/venda', VendaController.index)
+routes.get('/venda/frentista/:cpf', VendaController.vendasPorFrentista)
+routes.get('/venda/cliente/:cpf', VendaController.vendasPorCliente)
 routes.post('/venda', VendaController.store)
 routes.get('/cliente', ClienteController.index)
 routes.get('/frentista', FrentistaController.index)

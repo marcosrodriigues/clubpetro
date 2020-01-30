@@ -8,3 +8,21 @@ git clone https://github.com/marcosrodriigues/clubpetro.git
 && cd clubpetro
 ```
 Dentro da pasta clubpetro há duas pastas, [frontend](https://github.com/marcosrodriigues/clubpetro/tree/master/frontend) e [backend](https://github.com/marcosrodriigues/clubpetro/tree/master/backend). Cada página é referente a uma camada do  sistema clubpetro.  A seguir é apresentado cada projeto e como executá-lo.
+
+## frontend
+
+Na pasta [frontend](https://github.com/marcosrodriigues/clubpetro/tree/master/frontend) se encontra o frontend do projeto. As tecnologias que envolvem o projeto estão listadas abaixo:
+- Yarn v1.21.1
+- Npm v6.13.4
+- Node v12.14.1
+
+Vamos começar instalando todas as dependências do projeto. Para isso, acesse a pasta _frontend_ e execute o comando _npm install_
+ ```
+cd frontend && npm install
+```
+
+Aguarde o _npm install_ terminar de executar. Isto pode levar alguns minutos. Depois, é só executar _yarn start_
+```
+yarn start
+```
+Após o projeto iniciar, acesse seu _[localhost](http://localhost::3000/)_ para navegar na aplicação.

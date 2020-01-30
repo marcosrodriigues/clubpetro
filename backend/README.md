@@ -2,13 +2,14 @@
 
 ## Iniciando a aplicação
 
-Para iniciar a aplicação, abra o terminal e caminhe até o diretório da pasta _backend_. Digite _npm install.
+Para iniciar a aplicação, abra o terminal e caminhe até o diretório da pasta _backend_. Digite npm install.
 ```
+cd clubpetro/backend
 npm install
 ```
 Aguarde o _npm_ baixar e instalar os pacotes.
 
-Certifique-se de ter o servidor MySQL rodando em sua máquina. As configurações do MySQL podem ser encontradas [aqui](https://github.com/marcosrodriigues/clubpetro/blob/master/backend/src/config/database.js)
+Certifique-se de ter o servidor MySQL rodando em sua máquina. As configurações do MySQL podem ser encontradas [aqui](https://github.com/marcosrodriigues/clubpetro/blob/master/backend/src/config/database.js).
 
 Uma vez com os pacotes instalados e o MySQL configurado, é necessário criar o Banco de Dados. O projeto utiliza o Sequelize para trabalhar com o MySQL dentro do NodeJS. Então, com o Banco de Dados criado, execute o _npx sequelize db:migrate_ para configurar as tabelas dinamicamente a partir do Sequelize.
 ```

@@ -34,7 +34,7 @@ Na pasta [backend](https://github.com/marcosrodriigues/clubpetro/tree/master/bac
 - MySQL v5.7
 - Yarn v1.21.1
 - Npm v12.14.1
-- 
+
 Vamos começar instalando todas as dependências do projeto. Para isso, acesse a pasta _backend_ e execute o comando _npm install_
  ```
 cd backend && npm install

@@ -1,4 +1,3 @@
-var Venda = require('../models/').venda
 var ClienteService = require('../service/ClienteService');
 var FrentistaService = require('../service/FrentistaService');
 var VendaService = require('../service/VendaService');
@@ -8,7 +7,7 @@ var moment = require('moment');
 
 module.exports = {
     async index(request, response) {
-        var vendas = await Venda.findAll(); 
+        var vendas = await VendaService.findAll(); 
         return response.json( vendas );
     },
     
@@ -22,15 +21,12 @@ module.exports = {
 
             var cliente_db = await validJson.validateJsonInfo(cliente, ClienteService);
             var frentista_db = await validJson.validateJsonInfo(frentista, FrentistaService);
-
             venda.cliente = cliente_db.dataValues;
             venda.frentista = frentista_db.dataValues;
+
             
-            venda.cliente_id = venda.cliente.id;
-            venda.frentista_id = venda.frentista.id;
 
             venda = await VendaService.store(venda);
-
             return res.json (venda)
         }
         return res.json({ message : "stored!" });

@@ -8,6 +8,13 @@ module.exports = {
         return cliente;
     },
 
+    async findAll() {
+        var cliente = await Cliente.findAll( {
+            include: ['vendas']
+        });
+        return cliente;
+    },
+
     async store(cliente) {
         var stored = await Cliente.create(cliente);
         return stored;

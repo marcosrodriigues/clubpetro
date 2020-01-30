@@ -1,8 +1,8 @@
-var Cliente = require('../models/').cliente
+var ClienteService = require('../service/ClienteService')
 
 module.exports = {
     async index(request, response) {
-        var clientes = await Cliente.findAll(); 
+        var clientes = await ClienteService.findAll(); 
         return response.json( clientes );
     },
 }

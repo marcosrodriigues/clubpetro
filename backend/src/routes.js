@@ -8,6 +8,7 @@ const IndexController = require('./app/controller/IndexController');
 const routes = Router();
 
 routes.get('/', IndexController.index)
+routes.get('/seed', IndexController.seed)
 routes.get('/venda', VendaController.index)
 routes.post('/venda', VendaController.store)
 routes.get('/cliente', ClienteController.index)

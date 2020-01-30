@@ -7,7 +7,7 @@ module.exports = (sequelize, DataTypes) => {
     });
 
     Frentista.associate = (model) => {
-        Frentista.hasMany(model.venda, { foreignKey: "frentista_id" })
+        Frentista.hasMany(model.venda, { as: "vendas", foreignKey: "frentista_id", constraints: false})
     }
 
     return Frentista;

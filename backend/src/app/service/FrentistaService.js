@@ -8,6 +8,13 @@ module.exports = {
         return frentista;
     },
 
+    async findAll() {
+        var frentista = await Frentista.findAll( {
+            include: ['vendas']
+        });
+        return frentista;
+    },
+
     async store(frentista) {
         var stored = await Frentista.create(frentista);
         return stored;

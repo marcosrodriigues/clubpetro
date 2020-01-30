@@ -1,9 +1,17 @@
 var Venda = require('../models').venda;
+var Frentista = require('../models').frentista
+var Cliente = require('../models').cliente
 
 module.exports = {
     async findAll() {
         var vendas = await Venda.findAll({ 
-            include: [Venda.Frentista, Venda.Cliente]
+            include: [{
+                model: Frentista,
+                as: 'frentista'
+            }, {
+                model: Cliente,
+                as: 'cliente'
+            }]
          });
         return vendas;
     },
@@ -12,8 +20,8 @@ module.exports = {
         var stored = await Venda.create({
             preco: venda.preco,
             data_venda: venda.data_venda,
-            cliente_id: venda.cliente.id,
-            frentista_id: venda.frentista.id
+            frentista_id: venda.frentista.id,
+            cliente_id: venda.cliente.id
         });
         return stored;
     }

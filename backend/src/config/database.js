@@ -3,5 +3,8 @@ module.exports = {
   password: 'password',
   database: 'clubpetro',
   host: 'localhost',
-  dialect: 'mysql'
+  dialect: 'mysql',
+  define: {
+    timestamps: false
+  }
 }

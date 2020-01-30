@@ -3,28 +3,28 @@ CREATE DATABASE clubpetro;
 USE clubpetro;
 
 CREATE TABLE IF NOT EXISTS frentista (
-	id 		INT NOT NULL AUTO_INCREMENT,
+	id 		INTEGER NOT NULL AUTO_INCREMENT,
     cpf 	BIGINT,
-    nome 	VARCHAR(50),
+    nome 	VARCHAR(255),
     
     PRIMARY KEY (id)
 );
 
 CREATE TABLE IF NOT EXISTS cliente (
-	id 		INT NOT NULL AUTO_INCREMENT,
+	id 		INTEGER NOT NULL AUTO_INCREMENT,
     cpf 	BIGINT,
-    nome 	VARCHAR(50) ,
+    nome 	VARCHAR(255) ,
     
     PRIMARY KEY (id)
 );
 
 CREATE TABLE IF NOT EXISTS venda (
-	id		INT NOT NULL AUTO_INCREMENT,
-    frentista_id INT NOT NULL,
-    cliente_id INT NOT NULL,
+	id		INTEGER NOT NULL AUTO_INCREMENT,
+    frentista_id INTEGER NOT NULL,
+    cliente_id INTEGER NOT NULL,
     data_venda DATETIME DEFAULT CURRENT_TIMESTAMP,
     preco FLOAT,
-    venda TINYINT(1),
+    venda TINYINT(1) DEFAULT true,
     
     PRIMARY KEY(id)
 );

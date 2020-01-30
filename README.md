@@ -26,3 +26,24 @@ Aguarde o _npm install_ terminar de executar. Isto pode levar alguns minutos. De
 yarn start
 ```
 Após o projeto iniciar, acesse seu _[localhost](http://localhost::3000/)_ para navegar na aplicação.
+
+## backend
+
+Na pasta [backend](https://github.com/marcosrodriigues/clubpetro/tree/master/backend) se encontra o backend do projeto. As tecnologias que envolvem o sistema estão descritas abaixo:
+- NodeJS v12.14.1
+- MySQL v5.7
+- Yarn v1.21.1
+- Npm v12.14.1
+- 
+Vamos começar instalando todas as dependências do projeto. Para isso, acesse a pasta _backend_ e execute o comando _npm install_
+ ```
+cd backend && npm install
+```
+
+Aguarde o _npm install_ terminar de executar. Isto pode levar alguns minutos. Depois, é só executar _yarn dev_
+```
+yarn dev
+```
+Após o projeto iniciar, acesse seu _[localhost](http://localhost::3000/)_ para navegar na API.
+
+Você também pode acessar a pasta [backend](https://github.com/marcosrodriigues/clubpetro/tree/master/backend)  e conhecer todos os endpoints da aplicação, detalhados no README.md

@@ -27,7 +27,7 @@ A seguir estão listadas os endpoints da API do ClubPetro.
 
 ### Método GET
 - /
-	- Index da API, acessada a partir do _root_ do servidor. Disponibiliza um JSON com todos os endpoints disponíveis.
+	- Index da API, acessada a partir da pasta _root_ do servidor. Disponibiliza um JSON com todos os endpoints disponíveis.
 - /seed
 	- Alimenta o banco de dados com 10 clientes, 5 frentistas e 134 vendas, sendo 67 vendas em Janeiro e 67 vendas em Fevereiro.  Das 67 vendas, 66 são Fieis e 1 Fraude, que percente ao Cliente de CPF 23780026023 e ao Frentista de CPF 63349960022.
 - /venda

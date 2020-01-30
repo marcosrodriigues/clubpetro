@@ -15,8 +15,34 @@ module.exports = {
         const { cpf } = request.params;
         if (cpf){
             const frentista = await FrentistaService.findByCpf(cpf);
-            var vendas = await VendaService.findByFrentista(frentista.id);
-            return response.json(vendas);
+            if(frentista) {
+                var vendas = await VendaService.findByFrentista(frentista.id);
+                return response.json(vendas);
+            }
+        }
+        return response.json([]);
+    },
+
+    async vendasPorFrentistaFiel(request, response) {
+        const { cpf } = request.params;
+        if (cpf){
+            const frentista = await FrentistaService.findByCpf(cpf);
+            if (frentista) {
+                var vendas = await VendaService.findByFrentistaStatus(frentista.id, true);
+                return response.json(vendas);
+            }
+        }
+        return response.json([]);
+    },
+
+    async vendasPorFrentistaFraude(request, response) {
+        const { cpf } = request.params;
+        if (cpf){
+            const frentista = await FrentistaService.findByCpf(cpf);
+            if(frentista) {
+                var vendas = await VendaService.findByFrentistaStatus(frentista.id, false);
+                return response.json(vendas);
+            }
         }
         return response.json([]);
     },
@@ -25,8 +51,34 @@ module.exports = {
         const { cpf } = request.params;
         if (cpf){
             const cliente = await ClienteService.findByCpf(cpf);
-            var vendas = await VendaService.findByCliente(cliente.id);
-            return response.json(vendas);
+            if (cliente) {
+                var vendas = await VendaService.findByCliente(cliente.id);
+                return response.json(vendas);
+            }
+        }
+        return response.json([]);
+    },
+
+    async vendasPorClienteFiel(request, response) {
+        const { cpf } = request.params;
+        if (cpf){
+            const frentista = await ClienteService.findByCpf(cpf);
+            if (frentista) {
+                var vendas = await VendaService.findByClienteStatus(frentista.id, true);
+                return response.json(vendas);
+            }
+        }
+        return response.json([]);
+    },
+
+    async vendasPorClienteFraude(request, response) {
+        const { cpf } = request.params;
+        if (cpf){
+            const frentista = await ClienteService.findByCpf(cpf);
+            if(frentista) {
+                var vendas = await VendaService.findByClienteStatus(frentista.id, false);
+                return response.json(vendas);
+            }
         }
         return response.json([]);
     },

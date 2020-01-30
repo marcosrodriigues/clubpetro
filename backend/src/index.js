@@ -13,6 +13,5 @@ app.use(routes);
 
 app.listen(3000);
 
-
 const db = require('./app/models');
-db.sequelize.sync({force: true}).then(function () {});
+//db.sequelize.sync({force: true}).then(function () {});

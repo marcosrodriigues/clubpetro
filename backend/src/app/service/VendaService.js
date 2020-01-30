@@ -39,12 +39,36 @@ module.exports = {
         return vendas;
     },
 
+    async findByFrentistaStatus(id, fiel) {
+        const where = {
+            frentista_id: id,
+            data_venda: {
+                [Op.between]: [firstDayOfMonth, lastDayofMonth] 
+            },
+            fiel: fiel
+        }
+        var vendas = await Venda.findAll({where: where});
+        return vendas;
+    },
+
     async findByCliente(id) {
         const where = {
             cliente_id: id,
             data_venda: {
                 [Op.between]: [firstDayOfMonth, lastDayofMonth] 
             }
+        }
+        var vendas = await Venda.findAll({where: where});
+        return vendas;
+    },
+
+    async findByClienteStatus(id, fiel) {
+        const where = {
+            cliente_id: id,
+            data_venda: {
+                [Op.between]: [firstDayOfMonth, lastDayofMonth] 
+            },
+            fiel: fiel
         }
         var vendas = await Venda.findAll({where: where});
         return vendas;

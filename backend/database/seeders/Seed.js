@@ -26,6 +26,7 @@ module.exports = {
         await Venda.store({ frentista: frentista_1, cliente: cliente_1, preco: 100, data_venda: '2020-01-05'})
         await Venda.store({ frentista: frentista_1, cliente: cliente_1, preco: 150, data_venda: '2020-01-12'})
         await Venda.store({ frentista: frentista_1, cliente: cliente_1, preco: 120, data_venda: '2020-01-20'})
+        await Venda.store({ frentista: frentista_1, cliente: cliente_1, preco: 200, data_venda: '2020-01-28', fiel: false})
         await Venda.store({ frentista: frentista_2, cliente: cliente_1, preco: 110, data_venda: '2020-01-15'})
         await Venda.store({ frentista: frentista_4, cliente: cliente_1, preco: 105, data_venda: '2020-01-22'})
         
@@ -108,29 +109,6 @@ module.exports = {
         await Venda.store({ frentista: frentista_4, cliente: cliente_10, preco: 50, data_venda: '2020-01-24'})
         await Venda.store({ frentista: frentista_3, cliente: cliente_10, preco: 50, data_venda: '2020-01-26'})
 
-        
-        // [
-        //     total: 66,
-        //     {
-        //         frentista_1: 20, // nao pode vender mais
-        //         frentista_2: 19,
-        //         frentista_3: 13, // pode vender mais uma vez só, menos pros clientes 8 e 9
-        //         frentista_4: 9,
-        //         frentista_5: 5,
-        //     },
-        //     {
-        //         cliente_1: 5, // nao pode abastecer com frentista 1
-        //         cliente_2: 7, // nao pode abastecer mais
-        //         cliente_3: 7, // nao pode abastecer mais
-        //         cliente_4: 7, // nao pode abastecer mais
-        //         cliente_5: 7, // nao pode abastecer mais
-        //         cliente_6: 7, // nao pode abastecer mais
-        //         cliente_7: 7,// nao pode abastecer mais
-        //         cliente_8: 6, 
-        //         cliente_9: 6, 
-        //         cliente_10: 7, //nao pode vender mais
-        //     }
-        // ]
         return;
     }
 }

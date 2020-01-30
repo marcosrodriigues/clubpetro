@@ -54,6 +54,7 @@ module.exports = {
         var stored = await Venda.create({
             preco: venda.preco,
             data_venda: venda.data_venda,
+            fiel: venda.fiel,
             frentista_id: venda.frentista.id,
             cliente_id: venda.cliente.id
         });

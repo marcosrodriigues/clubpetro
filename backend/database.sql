@@ -24,6 +24,7 @@ CREATE TABLE IF NOT EXISTS venda (
     cliente_id INT NOT NULL,
     data_venda DATETIME DEFAULT CURRENT_TIMESTAMP,
     preco FLOAT,
+    venda TINYINT(1),
     
     PRIMARY KEY(id)
 );

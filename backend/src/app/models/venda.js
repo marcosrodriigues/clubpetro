@@ -2,6 +2,7 @@ module.exports = (sequelize,  DataTypes) => {
     const Venda = sequelize.define('venda', {
         preco: DataTypes.FLOAT,
         data_venda: DataTypes.DATE,
+        fiel: {type: DataTypes.BOOLEAN, defaultValue: true}
     }, {
         freezeTableName: true
     });

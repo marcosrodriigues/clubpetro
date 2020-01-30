@@ -44,14 +44,11 @@ module.exports = {
             venda.cliente = cliente_db.dataValues;
             venda.frentista = frentista_db.dataValues;
 
-            if(await VendaService.isVendaValid(venda)) {
-                venda = await VendaService.store(venda);
-                return res.json (venda);
-            }
-
-            return res.json ({message: "Venda fraudulenta"});
+            venda.fiel = await VendaService.isVendaValid(venda);
+            venda = await VendaService.store(venda);
+            return res.json (venda);
         }
 
-        return res.json({error: 'Venda não encontrada'});
+        return res.json({error: "Could not load venda"});
     }
 }

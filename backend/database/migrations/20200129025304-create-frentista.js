@@ -16,6 +16,11 @@ module.exports = {
       nome: {
         allowNull: false,
         type: Sequelize.STRING
+      },
+      fiel: {
+        allowNull: false,
+        type: Sequelize.BOOLEAN,
+        defaultValue: false
       }
   })
   },

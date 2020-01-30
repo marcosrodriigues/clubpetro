@@ -1,0 +1,42 @@
+[
+    {
+        "path": "/",
+        "method": "GET",
+        "description": "Index da API. A partir daqui você consegue ter acesso aos Endpoints da aplicação"
+    }, 
+    {
+        "path": "/seed",
+        "method": "GET",
+        "description": "Endpoint para alimentar o banco de dados. São inseridos 10 clientes, 7 frentistas e 66 vendas"
+    },
+    {
+        "path": "/venda",
+        "method": "GET",
+        "description": "Retorna todas as vendas realizadas no mes, incluindo o cliente e o frentista da vendas"
+    },
+    {
+        "path": "/venda",
+        "method": "POST",
+        "description": "Cadastra uma venda"
+    },
+    {
+        "path": "/venda/frentista/:cpf",
+        "method": "GET",
+        "description": "Retorna todas as vendas realizadas no mes pelo frentista de CPF informado no parametro"
+    },
+    {
+        "path": "/venda/cliente/:cpf",
+        "method": "GET",
+        "description": "Retorna todas as vendas feitas no mes pelo cliente de CPF informado no parametro"
+    },
+    {
+        "path": "/cliente",
+        "method": "GET",
+        "description": "Retorna todos os clientes bem como todas as suas vendas"
+    },
+    {
+        "path": "/frentista",
+        "method": "GET",
+        "description": "Retorna todos os frentistas bem como todas as suas vendas"
+    }
+]

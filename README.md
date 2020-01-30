@@ -25,7 +25,7 @@ Aguarde o _npm install_ terminar de executar. Isto pode levar alguns minutos. De
 ```
 yarn start
 ```
-Após o projeto iniciar, acesse seu _[localhost](http://localhost::3000/)_ para navegar na aplicação.
+Após o projeto iniciar, acesse seu _[localhost](http://localhost:3000/)_ para navegar na aplicação.
 
 ## backend
 
@@ -44,6 +44,6 @@ Aguarde o _npm install_ terminar de executar. Isto pode levar alguns minutos. De
 ```
 yarn dev
 ```
-Após o projeto iniciar, acesse seu _[localhost](http://localhost::3000/)_ para navegar na API.
+Após o projeto iniciar, acesse seu _[localhost](http://localhost:3000/)_ para navegar na API.
 
 Você também pode acessar a pasta [backend](https://github.com/marcosrodriigues/clubpetro/tree/master/backend)  e conhecer todos os endpoints da aplicação, detalhados no README.md

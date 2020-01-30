@@ -109,6 +109,93 @@ module.exports = {
         await Venda.store({ frentista: frentista_4, cliente: cliente_10, preco: 50, data_venda: '2020-01-24'})
         await Venda.store({ frentista: frentista_3, cliente: cliente_10, preco: 50, data_venda: '2020-01-26'})
 
+        // Cliente 1 abastecendo 5x sendo 3x com Frentista 1
+        await Venda.store({ frentista: frentista_1, cliente: cliente_1, preco: 100, data_venda: '2020-02-05'})
+        await Venda.store({ frentista: frentista_1, cliente: cliente_1, preco: 150, data_venda: '2020-02-12'})
+        await Venda.store({ frentista: frentista_1, cliente: cliente_1, preco: 120, data_venda: '2020-02-20'})
+        await Venda.store({ frentista: frentista_1, cliente: cliente_1, preco: 200, data_venda: '2020-02-28', fiel: false})
+        await Venda.store({ frentista: frentista_2, cliente: cliente_1, preco: 110, data_venda: '2020-02-15'})
+        await Venda.store({ frentista: frentista_4, cliente: cliente_1, preco: 105, data_venda: '2020-02-22'})
+        
+        // Cliente 2 abasetecendo 7x, 3x com o Frentista 1 e 2, e 1x com o Frentista 3
+        await Venda.store({ frentista: frentista_1, cliente: cliente_2, preco: 80, data_venda: '2020-02-04'})
+        await Venda.store({ frentista: frentista_1, cliente: cliente_2, preco: 45, data_venda: '2020-02-09'})
+        await Venda.store({ frentista: frentista_1, cliente: cliente_2, preco: 125, data_venda: '2020-02-14'})
+        await Venda.store({ frentista: frentista_2, cliente: cliente_2, preco: 120, data_venda: '2020-02-05'})
+        await Venda.store({ frentista: frentista_2, cliente: cliente_2, preco: 30, data_venda: '2020-02-08'})
+        await Venda.store({ frentista: frentista_2, cliente: cliente_2, preco: 50, data_venda: '2020-02-07'})
+        await Venda.store({ frentista: frentista_3, cliente: cliente_2, preco: 100, data_venda: '2020-02-20'})
+
+        //Cliente 3 abastecendo 7x
+        await Venda.store({ frentista: frentista_1, cliente: cliente_3, preco: 80, data_venda: '2020-02-12'})
+        await Venda.store({ frentista: frentista_1, cliente: cliente_3, preco: 100, data_venda: '2020-02-10'})
+        await Venda.store({ frentista: frentista_2, cliente: cliente_3, preco: 120, data_venda: '2020-02-08'})
+        await Venda.store({ frentista: frentista_2, cliente: cliente_3, preco: 40, data_venda: '2020-02-15'})
+        await Venda.store({ frentista: frentista_3, cliente: cliente_3, preco: 50, data_venda: '2020-02-20'})
+        await Venda.store({ frentista: frentista_4, cliente: cliente_3, preco: 20, data_venda: '2020-02-22'})
+        await Venda.store({ frentista: frentista_5, cliente: cliente_3, preco: 30, data_venda: '2020-02-25'})
+
+        // Cliente 4 abastecendo 7x
+        await Venda.store({ frentista: frentista_1, cliente: cliente_4, preco: 30, data_venda: '2020-02-01'})
+        await Venda.store({ frentista: frentista_1, cliente: cliente_4, preco: 50, data_venda: '2020-02-02'})
+        await Venda.store({ frentista: frentista_1, cliente: cliente_4, preco: 80, data_venda: '2020-02-05'})
+        await Venda.store({ frentista: frentista_2, cliente: cliente_4, preco: 100, data_venda: '2020-02-10'})
+        await Venda.store({ frentista: frentista_2, cliente: cliente_4, preco: 120, data_venda: '2020-02-15'})
+        await Venda.store({ frentista: frentista_2, cliente: cliente_4, preco: 150, data_venda: '2020-02-20'})
+        await Venda.store({ frentista: frentista_3, cliente: cliente_4, preco: 200, data_venda: '2020-02-25'})
+
+        // Cliente 5 abastecendo 7x
+        await Venda.store({ frentista: frentista_1, cliente: cliente_5, preco: 30, data_venda: '2020-02-10'})
+        await Venda.store({ frentista: frentista_1, cliente: cliente_5, preco: 30, data_venda: '2020-02-11'})
+        await Venda.store({ frentista: frentista_1, cliente: cliente_5, preco: 30, data_venda: '2020-02-12'})
+        await Venda.store({ frentista: frentista_2, cliente: cliente_5, preco: 30, data_venda: '2020-02-13'})
+        await Venda.store({ frentista: frentista_2, cliente: cliente_5, preco: 30, data_venda: '2020-02-14'})
+        await Venda.store({ frentista: frentista_2, cliente: cliente_5, preco: 30, data_venda: '2020-02-15'})
+        await Venda.store({ frentista: frentista_3, cliente: cliente_5, preco: 30, data_venda: '2020-02-16'})
+
+        // Cliente 6 abastecendo 7x
+        await Venda.store({ frentista: frentista_1, cliente: cliente_6, preco: 40, data_venda: '2020-02-02'})
+        await Venda.store({ frentista: frentista_1, cliente: cliente_6, preco: 40, data_venda: '2020-02-04'})
+        await Venda.store({ frentista: frentista_1, cliente: cliente_6, preco: 40, data_venda: '2020-02-06'})
+        await Venda.store({ frentista: frentista_2, cliente: cliente_6, preco: 40, data_venda: '2020-02-08'})
+        await Venda.store({ frentista: frentista_2, cliente: cliente_6, preco: 40, data_venda: '2020-02-10'})
+        await Venda.store({ frentista: frentista_2, cliente: cliente_6, preco: 40, data_venda: '2020-02-12'})
+        await Venda.store({ frentista: frentista_3, cliente: cliente_6, preco: 40, data_venda: '2020-02-14'})
+
+        // Cliente 7 abastecendo 7x
+        await Venda.store({ frentista: frentista_1, cliente: cliente_7, preco: 50, data_venda: '2020-02-14'})
+        await Venda.store({ frentista: frentista_1, cliente: cliente_7, preco: 50, data_venda: '2020-02-16'})
+        await Venda.store({ frentista: frentista_1, cliente: cliente_7, preco: 50, data_venda: '2020-02-18'})
+        await Venda.store({ frentista: frentista_2, cliente: cliente_7, preco: 50, data_venda: '2020-02-20'})
+        await Venda.store({ frentista: frentista_2, cliente: cliente_7, preco: 50, data_venda: '2020-02-22'})
+        await Venda.store({ frentista: frentista_2, cliente: cliente_7, preco: 50, data_venda: '2020-02-24'})
+        await Venda.store({ frentista: frentista_3, cliente: cliente_7, preco: 50, data_venda: '2020-02-26'})
+
+        // Cliente 8 abastecendo 7x
+        await Venda.store({ frentista: frentista_2, cliente: cliente_8, preco: 50, data_venda: '2020-02-16'})
+        await Venda.store({ frentista: frentista_3, cliente: cliente_8, preco: 50, data_venda: '2020-02-18'})
+        await Venda.store({ frentista: frentista_3, cliente: cliente_8, preco: 50, data_venda: '2020-02-20'})
+        await Venda.store({ frentista: frentista_3, cliente: cliente_8, preco: 50, data_venda: '2020-02-22'})
+        await Venda.store({ frentista: frentista_4, cliente: cliente_8, preco: 50, data_venda: '2020-02-24'})
+        await Venda.store({ frentista: frentista_4, cliente: cliente_8, preco: 50, data_venda: '2020-02-26'})
+
+        // Cliente 9 abastecendo 7x
+        await Venda.store({ frentista: frentista_3, cliente: cliente_9, preco: 50, data_venda: '2020-02-14'})
+        await Venda.store({ frentista: frentista_3, cliente: cliente_9, preco: 50, data_venda: '2020-02-16'})
+        await Venda.store({ frentista: frentista_3, cliente: cliente_9, preco: 50, data_venda: '2020-02-18'})
+        await Venda.store({ frentista: frentista_4, cliente: cliente_9, preco: 50, data_venda: '2020-02-20'})
+        await Venda.store({ frentista: frentista_4, cliente: cliente_9, preco: 50, data_venda: '2020-02-24'})
+        await Venda.store({ frentista: frentista_5, cliente: cliente_9, preco: 50, data_venda: '2020-02-26'})
+
+        // Cliente 10 abastecendo 7x
+        await Venda.store({ frentista: frentista_5, cliente: cliente_10, preco: 50, data_venda: '2020-02-14'})
+        await Venda.store({ frentista: frentista_5, cliente: cliente_10, preco: 50, data_venda: '2020-02-16'})
+        await Venda.store({ frentista: frentista_5, cliente: cliente_10, preco: 50, data_venda: '2020-02-18'})
+        await Venda.store({ frentista: frentista_4, cliente: cliente_10, preco: 50, data_venda: '2020-02-20'})
+        await Venda.store({ frentista: frentista_4, cliente: cliente_10, preco: 50, data_venda: '2020-02-22'})
+        await Venda.store({ frentista: frentista_4, cliente: cliente_10, preco: 50, data_venda: '2020-02-24'})
+        await Venda.store({ frentista: frentista_3, cliente: cliente_10, preco: 50, data_venda: '2020-02-26'})
+
         return;
     }
 }

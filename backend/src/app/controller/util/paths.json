@@ -7,7 +7,7 @@
     {
         "path": "/seed",
         "method": "GET",
-        "description": "Endpoint para alimentar o banco de dados. São inseridos 10 clientes, 7 frentistas e 67 vendas, sendo 66 fiel e 1 fraudulenta, atribuido ao cliente 1 e frentista 1)"
+        "description": "Endpoint para alimentar o banco de dados. São inseridos 10 clientes, 7 frentistas e 67 vendas para os meses de janeiro e fevereiro, sendo 66 fiel e 1 fraudulenta, atribuido ao cliente 1 e frentista 1"
     },
     {
         "path": "/venda",

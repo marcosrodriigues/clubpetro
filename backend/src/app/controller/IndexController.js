@@ -9,6 +9,6 @@ module.exports = {
 
     async seed(request, response) {
         await seed.seed();
-        return response.json({ message: "seeded" })
+        return response.json({ message: "Banco de dados alimentado!" })
     }
 }

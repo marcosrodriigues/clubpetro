@@ -8,14 +8,17 @@ npm install
 ```
 Aguarde o _npm_ baixar e instalar os pacotes.
 
-Certifique-se de ter o servidor MySQL rodando em sua máquina. As configurações do MySQL podem ser encontradas [aqui](https://github.com/marcosrodriigues/clubpetro/blob/master/backend/src/config/database.js).
+Certifique-se de ter o servidor MySQL rodando em sua máquina. As configurações do MySQL podem ser encontradas [aqui](https://github.com/marcosrodriigues/clubpetro/blob/master/backend/src/config/database.js)
 
-Uma vez com os pacotes instalados e o MySQL configurado, execute _yarn dev_ para iniciar o projeto.
+Uma vez com os pacotes instalados e o MySQL configurado, é necessário criar o Banco de Dados. O projeto utiliza o Sequelize para trabalhar com o MySQL dentro do NodeJS. Então, com o Banco de Dados criado, execute o _npx sequelize db:migrate_ para configurar as tabelas dinamicamente a partir do Sequelize.
+```
+npx sequelize db:migrate
+```
+Com o banco de dados configurado no NodeJS, execute _yarn dev_ para iniciar o projeto.
 ```
 yarn dev
 ```
 Após o projeto iniciar, acesse o endereço _[http://localhost:3030](http://localhost:3000/)_ em seu navegador para começar a navegar na API
-
 
 ## Endpoints
 
